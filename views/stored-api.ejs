@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Stored APIs</title>
+    <link rel="stylesheet" href="/style.css" />
+  </head>
+  <body>
+    <h1>Stored APIs</h1>
+    <ul>
+      <% apis.forEach(api => { %>
+      <li>
+        <a href="/api/<%= api._id %>">
+          <strong><%= api.name %></strong> - <%= api.method ?
+          api.method.toUpperCase() : 'N/A' %> <%= api.endpoint %>
+        </a>
+        <form action="/delete-api/<%= api._id %>" method="POST">
+          <button type="submit" onclick="return confirm('Are you sure?')">
+            Delete
+          </button>
+        </form>
+      </li>
+      <% }) %>
+    </ul>
+    <a href="/">Go Back</a>
+  </body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Add API</title>
+    <link rel="stylesheet" href="/style.css" />
+  </head>
+  <body>
+    <h1>Add an API</h1>
+    <form action="/store-api" method="POST">
+      <input type="text" name="name" placeholder="API Name" required />
+      <input type="text" name="endpoint" placeholder="API Endpoint" required />
+      <select name="method" required>
+        <option value="GET">GET</option>
+        <option value="POST">POST</option>
+        <option value="PUT">PUT</option>
+        <option value="DELETE">DELETE</option>
+      </select>
+      <textarea
+        name="description"
+        placeholder="API Description"
+        required
+      ></textarea>
+      <button type="submit">Submit</button>
+    </form>
+    <br />
+    <a href="/stored-api">View All Stored APIs</a>
+  </body>
+</html>

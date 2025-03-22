@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>API Details</title>
+    <link rel="stylesheet" href="/style.css" />
+  </head>
+  <body>
+    <h1>API Details</h1>
+    <p><strong>Name:</strong> <%= api.name %></p>
+    <p><strong>Endpoint:</strong> <%= api.endpoint %></p>
+    <p><strong>Method:</strong> <%= api.method.toUpperCase() %></p>
+    <p><strong>Description:</strong> <%= api.description %></p>
+    <a href="/stored-api">Back to API List</a>
+  </body>
+</html>
